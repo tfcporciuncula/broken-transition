@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/fragmentBlue"
+  >
+
+  <fragment
+    android:id="@+id/fragmentBlue"
+    android:name="com.tfcporciuncula.brokentransition.BlueFragment"
+    tools:layout="@layout/fragment_blue"
+    >
+
+    <action
+      android:id="@+id/toRedFragment"
+      app:destination="@id/fragmentRed"
+      app:enterAnim="@anim/slide_in_right"
+      app:exitAnim="@anim/slide_out_left"
+      app:popEnterAnim="@anim/slide_in_left"
+      app:popExitAnim="@anim/slide_out_right"
+      />
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/fragmentRed"
+    android:name="com.tfcporciuncula.brokentransition.RedFragment"
+    tools:layout="@layout/fragment_red"
+    />
+
+</navigation>
